@@ -18,9 +18,11 @@ use yii\widgets\ActiveForm;
         <div class="panel-body">
             <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
 
-            <?= $form->field($model, 'route')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'route')->textInput(['maxlength' => true])
+                ->hint('Example: http://sile.loc/search?param=1&param=2, product/search', ['class'=>'form-text text-muted']) ?>
 
-            <?= $form->field($model, 'params')->textarea(['maxlength' => true]) ?>
+            <?= $form->field($model, 'params')->textarea(['maxlength' => true])
+                ->hint('Json format') ?>
         </div>
     </div>
 
