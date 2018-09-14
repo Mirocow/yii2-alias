@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'Update Url Alias: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Url Aliases', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['update', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="url-alias-update">

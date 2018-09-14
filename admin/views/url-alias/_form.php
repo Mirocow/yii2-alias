@@ -16,13 +16,19 @@ use yii\widgets\ActiveForm;
     <div class="panel panel-default">
         <div class="panel-heading">Url alias</div>
         <div class="panel-body">
-            <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'alias')->textInput(['maxlength' => true])
+                ->hint('Example: http://sile.loc/about, about, about/page-1.html', ['class'=>'form-text text-muted']) ?>
+        </div>
+    </div>
 
+    <div class="panel panel-default">
+        <div class="panel-heading">System route with params</div>
+        <div class="panel-body">
             <?= $form->field($model, 'route')->textInput(['maxlength' => true])
-                ->hint('Example: http://sile.loc/search?param=1&param=2, product/search', ['class'=>'form-text text-muted']) ?>
+                ->hint('Example: http://sile.loc/search?param=1&param=2, site/search', ['class'=>'form-text text-muted']) ?>
 
             <?= $form->field($model, 'params')->textarea(['maxlength' => true])
-                ->hint('Json format') ?>
+                ->hint('Json format', ['class'=>'form-text text-muted']) ?>
         </div>
     </div>
 

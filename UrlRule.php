@@ -11,10 +11,14 @@ use yii\web\View;
  */
 class UrlRule extends \yii\web\UrlRule
 {
-    /** @var string $pattern */
+    /**
+     * @var string
+     */
     public $pattern = '';
 
-    /** @var string $route */
+    /**
+     * @var string
+     */
     public $route = '';
 
     /**
