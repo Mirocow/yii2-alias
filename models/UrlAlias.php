@@ -16,6 +16,7 @@ use yii\helpers\Json;
  * @property string $hash
  * @property string $redirect
  * @property integer $redirect_code
+ * @property string $source
  */
 class UrlAlias extends ActiveRecord
 {
@@ -38,7 +39,7 @@ class UrlAlias extends ActiveRecord
         return [
             [['alias', 'route', 'hash'], 'required'],
             [['status', 'redirect_code'], 'integer'],
-            [['alias', 'route', 'params', 'redirect'], 'string', 'max' => 255],
+            [['alias', 'route', 'params', 'redirect', 'source'], 'string', 'max' => 255],
             [['hash'], 'string', 'max' => 32],
         ];
     }
@@ -57,6 +58,7 @@ class UrlAlias extends ActiveRecord
             'hash' => 'Hash',
             'redirect' => 'Url redirect',
             'redirect_code' => 'Url redirect status code',
+            'source' => 'Source path',
         ];
     }
 

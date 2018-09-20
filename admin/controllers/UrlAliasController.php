@@ -144,6 +144,7 @@ class UrlAliasController extends Controller
             if($model->route <> $route) {
                 $model->route = $route;
                 $model->params = $request->getQueryParams();
+                $model->source = $request->getUrl();
             }
         }
     }

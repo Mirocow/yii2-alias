@@ -24,6 +24,8 @@ use yii\widgets\ActiveForm;
     <div class="panel panel-default">
         <div class="panel-heading">System route with params</div>
         <div class="panel-body">
+            <?= $form->field($model, 'source')->textInput(['disabled' => true]) ?>
+
             <?= $form->field($model, 'route')->textInput(['maxlength' => true])
                 ->hint('Example: http://sile.loc/search?param=1&param=2, site/search', ['class'=>'form-text text-muted']) ?>
 
