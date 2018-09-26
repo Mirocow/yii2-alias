@@ -5,6 +5,7 @@ namespace mirocow\alias;
 use mirocow\alias\models\UrlAlias;
 use mirocow\seocore\models\UrlMeta;
 use yii\web\View;
+use Yii;
 
 /**
  * Custom url rule
@@ -35,9 +36,10 @@ class UrlRule extends \yii\web\UrlRule
         if (is_object($urlAlias)) {
             if ($urlAlias->redirect) {
                 Yii::$app->response->redirect(
-                    [$urlAlias->redirect],
+                    $urlAlias->redirect,
                     $urlAlias->redirect_code
                 );
+                Yii::$app->end();
             } else {
                 return [$urlAlias->getRoute(), $urlAlias->getParams()];
             }
